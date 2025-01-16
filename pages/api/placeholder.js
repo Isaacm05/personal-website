@@ -9,7 +9,7 @@ import Head from "next/head";
 
 export default function Home() {
     const [darkMode, setDarkMode] = useState(false);
-    const [activeSection, setActiveSection] = useState("Isaac Mei.");
+    const [activeSection, setActiveSection] = useState("Homepage.");
 
     // Toggle dark mode
     useEffect(() => {
@@ -70,18 +70,19 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
+            {/* NavBar */}
             <NavBar
                 darkMode={darkMode}
                 setDarkMode={setDarkMode}
                 handleScroll={handleScroll}
                 activeSection={activeSection}
-                className="dark:bg-black"
             />
 
+            {/* Main Content */}
             <main className="bg-white dark:bg-black px-10 md:px-20 lg:px-40">
                 <Hero />
                 <About />
-                <div className={"px-1"}><Experience /></div>
+                <Experience />
                 <IconCategories />
                 <Projects />
             </main>
