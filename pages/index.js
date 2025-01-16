@@ -67,7 +67,7 @@ export default function Home() {
             <Head>
                 <title>Isaac Mei&apos;s Portfolio</title>
                 <meta name="description" content="Portfolio website" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.png" />
             </Head>
 
             <NavBar
