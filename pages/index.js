@@ -65,11 +65,11 @@ export default function Home() {
 
     return (
         <>
-            <Head>
+            <head>
                 <title>Isaac Mei&apos;s Portfolio</title>
                 <meta name="description" content="Portfolio website" />
                 <link rel="icon" href="/favicon.png" />
-            </Head>
+            </head>
 
             <NavBar
                 darkMode={darkMode}
