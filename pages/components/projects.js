@@ -21,55 +21,55 @@ export default function Projects() {
         <motion.section
             id="projects"
             data-section="Projects."
-            className="flex flex-col items-center justify-center text-center dark:bg-black"
+            className="flex flex-col items-center justify-center text-center dark:bg-black overflow-x-hidden px-4"
             initial={{opacity: 0}}
             whileInView={{opacity: 1}}
             viewport={{once: false}}
             transition={{duration: 1, ease: "linear"}}
         >
-            <div>
-                <p className="text-xl py-2 leading-8 text-black dark:text-white">
+            <div className="w-full max-w-6xl mx-auto">
+                <p className="text-xl py-4 leading-8 text-black dark:text-white">
                     Here are some of my projects! Hover over each one to see more details, and find the links to
                     the blog page or example. More projects to come in the future!
                 </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 w-full">
-                {projects.map((project, index) => (
-                    <div
-                        key={index}
-                        className="relative group transform transition duration-300 hover:scale-105"
-                    >
-                        <div className="relative w-full h-64">
-                            <Image
-                                src={project.src}
-                                alt={project.alt}
-                                className="rounded-lg object-cover"
-                                layout="fill"
-                                objectFit="cover"
-                            />
-                            <div
-                                className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                                <p className="text-white text-lg mb-4">{project.description}</p>
-                                <div className="flex gap-4">
-                                    <a
-                                        href={project.link}
-                                        className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-                                    >
-                                        View Project
-                                    </a>
-                                    <a
-                                        href="#"
-                                        className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition"
-                                    >
-                                        Blog Post
-                                    </a>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-10 w-full items-center">
+                    {projects.map((project, index) => (
+                        <div
+                            key={index}
+                            className="relative group transform transition duration-300 hover:scale-105"
+                        >
+                            <div className="relative w-full h-64">
+                                <Image
+                                    src={project.src}
+                                    alt={project.alt}
+                                    className="rounded-lg object-cover"
+                                    layout="fill"
+                                    objectFit="cover"
+                                />
+                                <div
+                                    className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"
+                                >
+                                    <p className="text-white text-lg mb-4">{project.description}</p>
+                                    <div className="flex gap-4">
+                                        <a
+                                            href={project.link}
+                                            className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+                                        >
+                                            View Project
+                                        </a>
+                                        <a
+                                            href="#"
+                                            className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition"
+                                        >
+                                            Blog Post
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-
         </motion.section>
     );
 }

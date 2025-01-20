@@ -18,6 +18,9 @@ a {
 * {
   box-sizing: border-box;
 }
+/** {*/
+/*  outline: 1px solid red; !* Visualize all element boundaries *!*/
+/*}*/
 
 @font-face {
   font-family: "burtons";

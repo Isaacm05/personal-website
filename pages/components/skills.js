@@ -24,7 +24,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 
 const IconBox = ({ Icon, label }) => {
     return (
-        <button className="flex flex-row items-center justify-center w-24 h-15 bg-black text-white py-2 px-2 rounded-md cursor-default dark:bg-white dark:text-black">
+        <button className="flex flex-row items-center justify-center w-24 bg-black text-white py-2 px-2 rounded-md cursor-default dark:bg-white dark:text-black">
             {label === "C#" ? (
                 <Image src={"/csharp.png"} alt={label} className="h-4 w-4" width={20} height={20} />
             ) : label === "Matlab" ? (
@@ -104,7 +104,7 @@ const IconCategories = () => {
         <motion.section
             id="skills"
             data-section="Skills."
-            className="flex flex-col md:flex-row pb-[7.5rem] bg-white dark:bg-black z-20"
+            className="my- flex flex-col md:flex-row pb-[7.5rem] bg-white dark:bg-black"
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: 1, ease: "linear"}}

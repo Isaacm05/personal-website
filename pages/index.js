@@ -6,6 +6,7 @@ import Experience from "./components/experience";
 import Projects from "./components/projects";
 import IconCategories from "./components/skills";
 import Head from "next/head";
+import "../styles/globals.css";
 
 export default function Home() {
     const [darkMode, setDarkMode] = useState(false);

@@ -11,6 +11,7 @@ export default function NavBar({ darkMode, setDarkMode, handleScroll, activeSect
         const handleResize = () => {
             if (window.innerWidth >= 768) {
                 setIsMenuOpen(false);
+                setIsMenuOpen(false);
             }
         };
         window.addEventListener("resize", handleResize);
@@ -109,13 +110,12 @@ export default function NavBar({ darkMode, setDarkMode, handleScroll, activeSect
                                         {item.name}
                                     </button>
                                 ) : (
-                                    <Link href={item.href}>
-                                        <a
-                                            onClick={() => setIsMenuOpen(false)}
-                                            className="text-2xl dark:text-white hover:underline"
-                                        >
-                                            {item.name}
-                                        </a>
+                                    <Link
+                                        href={item.href}
+                                        onClick={() => setIsMenuOpen(false)}
+                                        className="text-2xl dark:text-white hover:underline"
+                                    >
+                                        {item.name}
                                     </Link>
                                 )}
                             </li>

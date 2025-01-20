@@ -44,20 +44,20 @@ const Experience = () => {
 
     return (
         <motion.section
-            className="pb-32 bg-white dark:bg-black z-20"
+            className="pb-32 bg-white dark:bg-black z-20 overflow-x-hidden flex flex-col items-center justify-center"
             id="experience"
             data-section="Experience."
             initial="hidden"
             whileInView="visible"
-            viewport={{ amount: 0.2, once: true }}
+            viewport={{amount: 0.2, once: true}}
         >
-            <p className="text-xl py-2 leading-8 text-black flex justify-center dark:text-white">
-                These are my most recent experiences. Previous experiences are also located on my Linkedin and Resume.
+            <p className="text-xl py-6 leading-8 text-black dark:text-white text-center">
+                These are my most recent experiences. Previous experiences are also located on my LinkedIn and Resume.
             </p>
             <div
-                className="grid gap-x-2 gap-y-4 p-4"
+                className="grid gap-6 p-4 max-w-7xl mx-auto"
                 style={{
-                    gridTemplateColumns: "repeat(auto-fill, 300px)",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
                     justifyItems: "center",
                 }}
             >
@@ -93,19 +93,19 @@ const Experience = () => {
                 ].map((item, index) => (
                     <motion.div
                         key={index}
-                        className="w-[280px] h-[600px] rounded-none py-4 text-black border-2 border-black flex flex-col items-center mx-auto dark:text-white dark:border-white"
-                        viewport={{ once: true }}
+                        className="w-full max-w-xs rounded-lg py-4 text-black border-2 border-black flex flex-col items-center dark:text-white dark:border-white"
+                        viewport={{once: true}}
                         initial="hidden"
                         whileInView="visible"
                         variants={isMobile ? mobileVariants : desktopVariants}
                     >
                         <div className="w-full">
-                            <h1 className="font-bold text-1xl pb-4 px-2">{item.title}</h1>
-                            <hr className="border-t-2 border-black dark:border-white" />
+                            <h1 className="font-bold text-lg pb-2 px-2">{item.title}</h1>
+                            <hr className="border-t-2 border-black dark:border-white"/>
                         </div>
                         <div
                             className="w-full flex flex-col items-center justify-center"
-                            style={{ height: "280px" }}
+                            style={{height: "280px"}}
                         >
                             <Image
                                 src={item.image}
@@ -113,9 +113,10 @@ const Experience = () => {
                                 layout="intrinsic"
                                 width={250}
                                 height={250}
+                                alt={item.title}
                             />
                         </div>
-                        <hr className="border-t-2 border-black w-full dark:border-white" />
+                        <hr className="border-t-2 border-black w-full dark:border-white"/>
                         <p className="text-md pt-3 px-2 leading-6 font-bold text-center">
                             {item.date}
                         </p>
@@ -124,6 +125,7 @@ const Experience = () => {
                 ))}
             </div>
         </motion.section>
+
     );
 };
 
