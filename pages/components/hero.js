@@ -6,7 +6,7 @@ export default function Hero() {
         <>
             {/* Hero Section */}
             <motion.section
-                className="h-75vh flex flex-col mt-32 items-center bg-white text-black dark:bg-black dark:text-white"
+                className="flex flex-col mb-2 items-center bg-white text-black dark:bg-black dark:text-white"
                 data-section="Isaac Mei."
                 id="home"
                 initial={{opacity: 0}}
@@ -15,7 +15,7 @@ export default function Hero() {
                 transition={{duration: 1, ease: "linear"}}
             >
                 <div className="text-center p-10">
-                    <h2 className="text-5xl py-2 font-bold">Isaac Mei</h2>
+                    <h2 className="text-5xl py-2 font-bold"><br/><br/>Isaac Mei</h2>
                     <h3 className="text-2xl py-2 md:text-3xl">
                         Computer Engineering @ Purdue University.
                     </h3>

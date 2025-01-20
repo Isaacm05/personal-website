@@ -5,7 +5,7 @@ import face from "../../public/face.png";
 export default function About() {
     return (
         <motion.section
-            className="pb-32 bg-white dark:bg-black z-20"
+            className="pb-32 pt-32 bg-white dark:bg-black"
             id="about"
             data-section="About."
             initial={{opacity: 0}}
