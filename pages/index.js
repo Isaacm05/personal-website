@@ -6,7 +6,8 @@ import Experience from "./components/experience";
 import Projects from "./components/projects";
 import IconCategories from "./components/skills";
 import Head from "next/head";
-import "../styles/globals.css";
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 
 export default function Home() {
     const [darkMode, setDarkMode] = useState(false);
@@ -85,6 +86,7 @@ export default function Home() {
                 <div className={"px-1"}><Experience /></div>
                 <IconCategories />
                 <Projects />
+                <SpeedInsights />
             </main>
         </>
     );

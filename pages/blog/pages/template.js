@@ -6,9 +6,10 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
 import Link from "next/link";
 import candid from "../../../public/candid.jpg";
+import {router} from "next/client";
 
 export default function BlogPage() {
-    const currentLink = "/blog/pages/ml";
+    const currentLink = router.asPath;
     const recentPosts = blogs
         .sort((a, b) => new Date(b.date) - new Date(a.date))
         .slice(0, 3);
